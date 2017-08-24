@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#bg{
+    position:absolute;
+    left:50%;
+    top:45%;
+    transform: translate(-50%,-50%);
+   /* border:1px solid black;*/
+    height:600px;
+    width:450px;
+    overflow: hidden;
+    background-image: url("../img/bg.jpg");
+    background-size: 100%;
+}
+#score{
+    margin-left:10px;
+    margin-top: 10px;
+    color: royalblue;
+    font-size: 32px;
+}
+#start{
+   position:absolute;
+    top: 300px;
+    left:210px;
+}
+#doodle{
+    position:absolute;
+    top: 500px;
+    left:210px;
+    width:62px;
+    height:60px;
+    background-image: url("../img/Rdoodle.png");
+    display: none;
+}
+.panel{
+    width:70px;
+    height:14px;
+    border-radius:60px;
+    background-color: darkgreen;
+}
+#startpanel{
+    position:absolute;
+    top: 560px;
+    left:200px;
+    display: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Doodle Jump</title>
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="bg">
+        <div id="score"></div>
+        <div id="doodle">
+        </div>
+     <button id="start">start</button>
+        <div class="panel" id="startpanel">
+        </div>
+    </div>
+</body>
+    <script src="js/createpanel.js"></script>
+    <script src="js/jump.js"></script>
+    <script src="js/mousemove.js"></script>
+    <script src="js/collide.js"></script>
+    <script src="js/jumpmove.js"></script>
+    <script>
+        var doodle = document.getElementById("doodle");
+        var bg = document.getElementById("bg");
+        var start = document.getElementById("start");
+        var panel = document.getElementsByClassName("panel");
+        var startpanel = document.getElementById("startpanel");
+        var doodlejump;
+        var doodlepanel;
+        var jumpheight = 17;
+        var JH = jumpheight;
+        var ddoffsetleft;
+        var panelmove;
+        var doodlecondition = 0;
+        var standardpanel;
+        var imgchange;
+        var check;
+        var gaming;
+        var score = 0;
+        var level = 60 ;
+        var probability = 0.7;
+        var speed = 1 ;
+        var scorediv = document.getElementById("score");
+        start.addEventListener("click",function () {
+          doodlejump = setInterval(jump,30);
+          doodlepanel = setInterval(collide,20);
+          gaming = setInterval(function () {
+            while(panel[panel.length-1].offsetTop>0){
+              createpanel();
+            }},1);
+
+            start.style.display = "none";
+            doodle.style.display = "inline";
+            doodle.style.left = 210 + "px";
+            ddoffsetleft = doodle.offsetLeft;
+            bg.style.cursor = "none";
+            startpanel.style.display = "inline";
+        });
+    </script>
+</html>
