@@ -2,22 +2,24 @@
  * Created by LI on 2017/8/9.
  */
 var mouseTrack = []
-bg.onmousemove = function (ev) {
+
+window.onmousemove = function (ev) {
 
     var mousePosition = function (ev) {
         mouseTrack.push(ev.clientX);
-        if (mouseTrack.length > 3) {
+        if (mouseTrack.length > 2) {
             mouseTrack.shift();
         }
     };
     mousePosition(ev);
+    console.log(ev.clientX);
     var direction = mouseTrack[1] - mouseTrack[0];
     if (direction < 0) {
         doodle.style.backgroundImage = "url(img/Ldoodle.png)";
         if (doodle.offsetLeft < -10) {
             doodle.style.left = -10 + "px";
         } else {
-            doodle.style.left = doodle.offsetLeft - 2 + "px";
+            doodle.style.left = doodle.offsetLeft - 8 + "px";
         }
     } else {
         if (direction > 0) {
@@ -25,7 +27,7 @@ bg.onmousemove = function (ev) {
             if (doodle.offsetLeft > 400) {
                 doodle.style.left = 400 + "px";
             } else {
-                doodle.style.left = doodle.offsetLeft + 2 + "px";
+                doodle.style.left = doodle.offsetLeft + 8 + "px";
             }
         }
     }

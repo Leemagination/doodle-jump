@@ -16,7 +16,7 @@ function jump() {
 
     var fall = doodle.offsetTop + doodle.offsetHeight;
     if(fall>bg.offsetHeight){
-        alert("you failed\n"  +"your score:"+ score);
+        alert("you failed\n"  +"your score:"+ parseInt(score));
         clearInterval(doodlejump);
         clearInterval(gaming);
         clearInterval(doodlejump);
