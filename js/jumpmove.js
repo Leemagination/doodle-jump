@@ -1,7 +1,11 @@
 /**
  * Created by LI on 2017/8/9.
  */
+var probability = 0.7;
+var score = 0;
+var speed = 1;
 function jumpmove(){
+    var scorediv = document.getElementById("score");
     doodle.style.top = doodle.offsetTop + speed +"px";
     score += speed;
     scorediv.innerHTML = parseInt(score);

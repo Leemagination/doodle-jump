@@ -20,6 +20,8 @@
     margin-top: 10px;
     color: royalblue;
     font-size: 32px;
+    position:relative;
+    z-index: 10;
 }
 #start{
    position:absolute;

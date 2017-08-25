@@ -1,12 +1,13 @@
 /**
  * Created by LI on 2017/8/9.
  */
-function collide(){
 
-    var doodleL = doodle.offsetLeft ;
-    var doodleR = doodle.offsetWidth + doodleL ;
+function collide() {
+
+    var doodleL = doodle.offsetLeft;
+    var doodleR = doodle.offsetWidth + doodleL;
     var doodleD = doodle.offsetHeight + doodle.offsetTop;
-    for(let i=0;i<panel.length;i++) {
+    for (let i = 0; i < panel.length; i++) {
         var panelL = panel[i].offsetLeft;
         var panelR = panel[i].offsetWidth + panel[i].offsetLeft;
         var panelU = panel[i].offsetTop;
@@ -21,28 +22,28 @@ function collide(){
 
                     standardpanel = panelD;
 
-                    if(panel[i].style.backgroundColor == "white"){
+                    if (panel[i].style.backgroundColor == "white") {
                         bg.removeChild(panel[i]);
                     }
                     if (standardpanel < 500) {
-                        var panellist= [];
-                        for( let i = 0 ; i< panel.length;i++){
+                        var panellist = [];
+                        for (let i = 0; i < panel.length; i++) {
                             var ele = panel[i];
                             panellist.push(ele);
                         }
                         panelmove = setInterval(function () {
                             jumpmove();
                             standardpanel = panellist[i].offsetHeight + panellist[i].offsetTop;
-                            if(standardpanel>=500){
+                            if (standardpanel >= 500) {
                                 clearInterval(panelmove);
                             }
-                        },4);
+                        }, 4);
                     }
 
                 }
             }
         }
-        if(panel[0].offsetTop > 600){
+        if (panel[0].offsetTop > 610) {
             bg.removeChild(panel[0]);
         }
     }
