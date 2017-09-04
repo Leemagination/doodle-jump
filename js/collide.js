@@ -1,7 +1,10 @@
 /**
  * Created by LI on 2017/8/9.
  */
-
+/*
+*  人物与砖块碰撞检测
+*  
+* */
 function collide() {
 
     var doodleL = doodle.offsetLeft;
@@ -23,7 +26,7 @@ function collide() {
                     standardpanel = panelD;
 
                     if (panel[i].style.backgroundColor == "white") {
-                        bg.removeChild(panel[i]);
+                        bg.removeChild(panel[i]);/*白色砖块只能跳一次*/
                     }
                     if (standardpanel < 500) {
                         var panellist = [];
@@ -32,7 +35,7 @@ function collide() {
                             panellist.push(ele);
                         }
                         panelmove = setInterval(function () {
-                            jumpmove();
+                            jumpmove();/*碰撞成功   人物与砖块向下移动*/
                             standardpanel = panellist[i].offsetHeight + panellist[i].offsetTop;
                             if (standardpanel >= 500) {
                                 clearInterval(panelmove);
@@ -44,7 +47,7 @@ function collide() {
             }
         }
         if (panel[0].offsetTop > 610) {
-            bg.removeChild(panel[0]);
+            bg.removeChild(panel[0]);/*超出画面的砖块移除*/
         }
     }
 }

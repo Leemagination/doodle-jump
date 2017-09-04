@@ -1,6 +1,10 @@
 /**
  * Created by LI on 2017/8/9.
  */
+/*  
+*  使用setinterval函数实现人物跳跃动画
+*  失败判定
+* */
 function jump() {
     
     doodle.style.top = doodle.offsetTop - JH-- + "px";

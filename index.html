@@ -24,7 +24,7 @@
   var bg = document.getElementById("bg");
   var start = document.getElementById("start");
   var panel = document.getElementsByClassName("panel");
-  var startpanel = document.getElementById("startpanel");
+  var startpanel = document.getElementById("startpanel");/*开始游戏人物站立砖块*/
 
   var doodlejump;
   var doodlepanel;
@@ -32,16 +32,17 @@
 
   var panelmove;
 
-  var jumpheight = 17;
+  var jumpheight = 17; /*跳跃高度*/
   var JH = jumpheight;
-  var doodlecondition = 0;
-  var standardpanel;
+  var doodlecondition = 0;/*人物上升下降状态*/
+  var standardpanel; /*当前人物站立的砖块*/
 
-  var level = 60;
+  var level = 60;/*难度系数*/
+
   start.addEventListener("click", function () {
-    doodlejump = setInterval(jump, 30);
-    doodlepanel = setInterval(collide, 1);
-    gaming = setInterval(function () {
+    doodlejump = setInterval(jump, 30);   /*跳跃动画*/
+    doodlepanel = setInterval(collide, 1); /*碰撞检测*/
+    gaming = setInterval(function () { /*   不断随机制造砖块*/
       while (panel[panel.length - 1].offsetTop > 0) {
         createpanel();
       }

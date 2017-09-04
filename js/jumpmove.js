@@ -1,6 +1,12 @@
 /**
  * Created by LI on 2017/8/9.
  */
+
+/*
+*   砖块和人物向下移动
+*   记录得分
+*   难度提升(火狐浏览器在提生时出现bug)
+* */
 var probability = 0.7;
 var score = 0;
 var speed = 1;

@@ -1,6 +1,9 @@
 /**
  * Created by LI on 2017/8/9.
  */
+/*检测鼠标移动 
+  控制人物左右移动和切换图片
+*/
 var mouseTrack = []
 
 window.onmousemove = function (ev) {
@@ -12,7 +15,6 @@ window.onmousemove = function (ev) {
         }
     };
     mousePosition(ev);
-    console.log(ev.clientX);
     var direction = mouseTrack[1] - mouseTrack[0];
     if (direction < 0) {
         doodle.style.backgroundImage = "url(img/Ldoodle.png)";

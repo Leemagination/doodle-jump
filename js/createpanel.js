@@ -1,6 +1,10 @@
 /**
  * Created by LI on 2017/8/9.
  */
+/*
+* 使用随机函数创建砖块
+* 
+* */
 var  randompanel = {
     randomNum:function (min,max) {
         return parseInt(Math.random()*(max-min+1)+min);
